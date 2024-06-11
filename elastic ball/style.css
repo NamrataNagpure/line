@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #111;
+}
+.elastic{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+
+}
+.elastic svg{
+    position:absolute;
+    width: 400px;
+    height: 150px;
+}
+.elastic svg:nth-child(2){
+    filter: blur(25px);
+}
+.elastic svg path{
+    width:100%;
+    stroke:#ff0092;
+    stroke-width: 10;
+    stroke-linecap: round;
+    d:path('M 10 80 Q 190 80 390 80');
+    animation:animate 2.5s linear infinite ,animateColor 2.5s linear infinite;
+}
+@keyframes animate{
+    0%{
+        d:path('M 10 80 Q 190 80 390 80');
+    }
+    10%{
+        d:path('M 10 80 Q 190 160 390 80');
+    }
+    20%{
+        d:path('M 10 80 Q 190 20 390 80');
+    }
+    30%{
+        d:path('M 10 80 Q 190 120 390 80');
+    }
+    35%{
+        d:path('M 10 80 Q 190 100 390 80');
+    }
+    40%{
+        d:path('M 10 80 Q 190 80 390 80');
+    }
+    50%{
+        d:path('M 10 80 Q 190 90 390 80');
+    }
+    55%{
+        d:path('M 10 80 Q 190 80 390 80');
+    }
+    
+}
+@keyframes animateColor{
+    0%{
+        stroke: #ff0092;
+    }
+    33.33%{
+        stroke: #0f0;
+    }
+    66.66%{
+        stroke:#ff0;
+    }
+
+}
